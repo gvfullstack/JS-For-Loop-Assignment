@@ -5,7 +5,25 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  let withdrawalSums = [];
+  
+  for(let i = 0; i < array.length; i++){
+    let curCustWidrawal = array[i].withdrawals
+    let curCust = array[i]  
+   	let sumOfClientWithdrawals = 0;
+    if(!curCustWidrawal){
+      withdrawalSums.push(sumOfClientWithdrawals)}
+    else{
+      	sumOfClientWithdrawals = 0 
+        for(let j = 0; j < curCustWidrawal.length; j++){
+          sumOfClientWithdrawals += curCustWidrawal[j]
+    	}
+      
+    withdrawalSums.push(sumOfClientWithdrawals)
+      }
+  }
 
+  return withdrawalSums
 }
 
 // === TEST YOURSELF ===

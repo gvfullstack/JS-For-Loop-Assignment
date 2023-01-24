@@ -6,6 +6,18 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
+  let bankAccounts = [];
+  
+  for(let i = 0; i < array.length; i++){
+    let curCustBal = array[i].balance
+    let curCust = array[i]  
+    
+    if(curCustBal > 100){
+    bankAccounts.push(curCust)
+    }
+  }
+
+  return bankAccounts
 
 }
 

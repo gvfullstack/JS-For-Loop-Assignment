@@ -6,7 +6,14 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
+  let clientNames = [];
+  
+  for(let i = 0; i < array.length; i++){
+    let curVal = array[i].name
+    clientNames.push(curVal)
+  }
 
+  return clientNames
 }
 
 

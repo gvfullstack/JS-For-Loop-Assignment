@@ -7,7 +7,36 @@
 
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
-
+  let outOfBalAccounts = [];
+  
+  for(let i = 0; i < array.length; i++){
+    let deposits = array[i].deposits
+    let withdrawals = array[i].withdrawals
+    let curCust = array[i]  
+   	let sumOfClientDeposits = 0;
+    let sumOfWithdrawals = 0;
+    
+    if(!deposits){
+      sumOfClientDeposits = 0}
+    else{
+      	sumOfClientDeposits = 0 
+        for(let j = 0; j < deposits.length; j++){
+          sumOfClientDeposits += deposits[j]
+    		}
+    } 
+    if(!withdrawals){
+      sumOfWithdrawals = 0}
+    else{
+      	sumOfWithdrawals = 0 
+        for(let k = 0; k < withdrawals.length; k++){
+          sumOfWithdrawals += withdrawals[k]
+    		}
+  	}
+   if((sumOfClientDeposits - sumOfWithdrawals) !== curCust.balance  ) {
+     outOfBalAccounts.push(curCust)
+   }
+  }
+  return outOfBalAccounts
 }
 
 

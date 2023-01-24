@@ -7,7 +7,25 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  let containsA = []
+	let lacksA = []
+  
+  let arrOfArrs = [containsA, lacksA]
+  
+  for(let i = 0; i < array.length; i++){
+  	
+    for(let j = 0; j < array[i].length; j++){
+    	if(array[i][j]==="a"){
+        containsA.push(array[i])
+        break
+      }
+      else if(j+1 === array[i].length){
+        lacksA.push(array[i])
+      }
+    }		  
+	 }
+  
+  return arrOfArrs
 }
 
 

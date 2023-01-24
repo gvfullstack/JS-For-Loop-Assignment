@@ -5,7 +5,19 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  
+  let sum = 0;
 
+  for(let i = 0; i < array.length; i++){
+    sum+=array[i]
+  }
+    console.log(sum)
+  
+    console.log(array.length)
+  
+  let average = sum/array.length
+
+  return average
 }
 
 
