@@ -6,13 +6,18 @@
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
   let clientsWithLetter = [];
+ 
+  letter = letter.toUpperCase()
   
-  for(let i = 0; i < array.length; i++){
+  for(let i = 0; i < array.length; i++) {
     let curCustName = array[i].name
-    let curCust = array[i]  
-    if(curCustName.toUpperCase().includes(letter.toUpperCase())){
-    clientsWithLetter.push(curCustName)
-    }
+    let curCust = array[i]
+      for(let j = 0; j < curCustName.length; j++) {
+        let currLetter = curCustName[j].toUpperCase() 
+        if( currLetter === letter){
+          clientsWithLetter.push(curCustName)
+        }
+      }
   }
 
   return clientsWithLetter
